@@ -1,64 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MidWay-Droid – Under Construction</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MidWay-Droid | Project Blueprint</title>
   <style>
-    * {
+    body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Orbitron', sans-serif;
-      height: 100vh;
-      background: radial-gradient(circle, #000000 0%, #0f0f0f 100%);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      overflow: hidden;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0b0c10;
+      color: #c5c6c7;
     }
 
     .container {
-      text-align: center;
-      animation: fadeIn 2s ease-in-out;
-    }
-
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      animation: glow 2s infinite alternate;
-      letter-spacing: 2px;
-      color: #00ffe1;
-    }
-
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      color: #ccc;
-    }
-
-    .drone {
-      width: 120px;
-      height: 120px;
-      margin: 0 auto 20px;
-      background: url('https://cdn-icons-png.flaticon.com/512/10390/10390357.png') no-repeat center/contain;
-      animation: fly 6s infinite ease-in-out;
-    }
-
-    @keyframes glow {
-      0% { text-shadow: 0 0 5px #00ffe1, 0 0 10px #00ffe1; }
-      100% { text-shadow: 0 0 20px #00ffe1, 0 0 40px #00ffe1; }
-    }
-
-    @keyframes fly {
-      0% { transform: translateY(0px) rotate(0deg); }
-      50% { transform: translateY(-20px) rotate(2deg); }
-      100% { transform: translateY(0px) rotate(-2deg); }
+      padding: 50px;
+      max-width: 1000px;
+      margin: auto;
+      animation: fadeIn 1.5s ease-in;
     }
 
     @keyframes fadeIn {
@@ -66,24 +25,95 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    .email {
-      font-size: 0.9rem;
-      margin-top: 10px;
-      color: #999;
+    h1 {
+      color: #66fcf1;
+      font-size: 3rem;
+      margin-bottom: 10px;
     }
 
-    .email a {
-      color: #00ffe1;
-      text-decoration: none;
+    h3 {
+      color: #45a29e;
+      font-weight: normal;
+      margin-bottom: 30px;
+    }
+
+    .section {
+      background: #1f2833;
+      border-left: 5px solid #66fcf1;
+      padding: 20px 30px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+    }
+
+    .section h2 {
+      margin-top: 0;
+      color: #66fcf1;
+    }
+
+    .section p {
+      line-height: 1.7;
+    }
+
+    .image-container {
+      text-align: center;
+      margin-top: 30px;
+      perspective: 1000px;
+    }
+
+    .rotating-model {
+      width: 300px;
+      height: 300px;
+      margin: 0 auto;
+      background: url('A_webpage_section_titled_"Project_Blueprint_&_Obje.png') no-repeat center/contain;
+      animation: rotateModel 10s linear infinite;
+      transform-style: preserve-3d;
+    }
+
+    @keyframes rotateModel {
+      from {
+        transform: rotateY(0deg);
+      }
+      to {
+        transform: rotateY(360deg);
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .container {
+        padding: 30px;
+      }
+      h1 {
+        font-size: 2rem;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="drone"></div>
     <h1>MidWay-Droid</h1>
-    <p>Our AI-powered surveillance drone is getting ready to launch.<br>Stay tuned for something revolutionary.</p>
-    <div class="email">Contact us: <a href="mailto:mukilanand43@gmail.com">team@midwaydroid.com</a></div>
+    <h3>AI-Powered Drone Safety System</h3>
+
+    <div class="section">
+      <h2>🔍 Project Objective</h2>
+      <p>
+        MidWay-Droid aims to revolutionize public safety using intelligent aerial drones integrated with artificial intelligence. Our core objective is to monitor, identify, and respond to threats in real-time, focusing on safeguarding women, children, and crowds in public areas. The system integrates drone surveillance, object/person detection, and automated alert mechanisms directly to local authorities.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>🧹 Project Blueprint</h2>
+      <p>
+        <strong>Phase 1:</strong> Build a basic flying prototype using affordable hardware (APM 2.8, brushless motors, and LiPo batteries).<br><br>
+        <strong>Phase 2:</strong> Integrate GPS and camera systems to enable geo-mapping and real-time visual monitoring.<br><br>
+        <strong>Phase 3:</strong> Connect Raspberry Pi with onboard flight controller to run object detection AI models (YOLO/OpenCV).<br><br>
+        <strong>Phase 4:</strong> Implement crowd behavior analysis, suspicious movement detection, and live alerting via GSM modules.<br><br>
+        <strong>Phase 5:</strong> Expand with Lidar, heat sensing, and swarm control for broader surveillance.
+      </p>
+    </div>
+
+    <div class="image-container">
+      <div class="rotating-model"></div>
+    </div>
   </div>
 </body>
 </html>
